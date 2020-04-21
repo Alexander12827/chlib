@@ -1,7 +1,7 @@
 /******************************************************************************
  MIT License
 
-Copyright (c) 2019 donBuba
+Copyright (c) 2020 Alexander12827
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -32,6 +32,16 @@ extern "C" {
 void setup() {
     // Disable WiFi
     wifi_set_opmode(NULL_MODE);
+	
+	// PREVENT UART DOWNLOAD FAILURES!!!
+    pinMode(2, OUTPUT);
+    for(int i=0;i<5;i++){
+      digitalWrite(2, HIGH);
+      delay(500);
+      digitalWrite(2, LOW);
+      delay(500);
+    }
+	
     initBroadcast(60);
     configureBroadcast();
     setECLInterface(BW);

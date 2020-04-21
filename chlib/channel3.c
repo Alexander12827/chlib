@@ -1,7 +1,7 @@
 /******************************************************************************
  MIT License
 
-Copyright (c) 2019 donBuba
+Copyright (c) 	2020 Alexander12827
  	            2015 Charles Lohr
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
